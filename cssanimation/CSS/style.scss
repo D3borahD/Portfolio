@@ -1,0 +1,97 @@
+$cd-btn: #011c37;
+$cd-txt: #15DEA5;
+
+/*Retour à la page principale*/
+.portfolio {
+    background: $cd-txt;
+    text-decoration: none;
+    width: 15rem;
+    text-align: center;
+    margin-left: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 10rem;
+    transform: scale(1);
+    transition: transform 400ms;
+}
+
+/* Bouton "vois comme je grandis*/
+body{
+    margin: 20px;
+}
+
+.btn {
+    background: $cd-btn;
+    color: $cd-txt;
+    width: 15rem;
+    text-align: center;
+    margin-left: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 10rem;
+    transform: scale(1);
+    transition: transform 400ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+/*formulaire*/
+$cd-box: rgb(178, 227, 241);
+$cd-txt2: #6300a0;
+$cd-danger: #b20a37;
+$cd-txt--invalid: #fff;
+
+.form {
+    &__group {
+        & input {
+            border: 2px solid $cd-box;
+            border-radius: 100rem;
+            color: $cd-txt2;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            outline: none;
+            padding: .5rem;
+            width: 50%;
+            transition: background-color 500ms;
+            &:focus {
+                border: 2px solid $cd-txt2;
+            }  
+            &:not(:focus):invalid {
+                background: $cd-danger;
+                border: 2px solid $cd-danger;
+                color: $cd-txt--invalid;
+            }
+        }
+    }
+}
+
+/*Modifier les éléments voisin*/
+
+$ball-size: 15rem;
+
+
+.btn2 {
+    background: $cd-btn;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    width: 35%;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 10rem;
+    &:active + .ball{
+        transform: scale(1.0);
+    }
+}
+.ball {
+    width: $ball-size;
+    height: $ball-size;
+    background: $cd-txt;
+    margin-bottom: 1rem;
+    border-radius: $ball-size * 0.5;
+    transform: scale(0.1);
+    transition: transform 4000ms;
+}

@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/*Retour à la page principale*/
+.portfolio {
+  background: #15DEA5;
+  text-decoration: none;
+  width: 15rem;
+  text-align: center;
+  margin-left: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 10rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+/* Bouton "vois comme je grandis*/
+body {
+  margin: 20px;
+}
+
+.btn {
+  background: #011c37;
+  color: #15DEA5;
+  width: 15rem;
+  text-align: center;
+  margin-left: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 10rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+/*formulaire*/
+.form__group input {
+  border: 2px solid #b2e3f1;
+  border-radius: 100rem;
+  color: #6300a0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  outline: none;
+  padding: .5rem;
+  width: 50%;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.form__group input:focus {
+  border: 2px solid #6300a0;
+}
+
+.form__group input:not(:focus):invalid {
+  background: #b20a37;
+  border: 2px solid #b20a37;
+  color: #fff;
+}
+
+/*Modifier les éléments voisin*/
+.btn2 {
+  background: #011c37;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  width: 35%;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 10rem;
+}
+
+.btn2:active + .ball {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.ball {
+  width: 15rem;
+  height: 15rem;
+  background: #15DEA5;
+  margin-bottom: 1rem;
+  border-radius: 7.5rem;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  -webkit-transition: -webkit-transform 4000ms;
+  transition: -webkit-transform 4000ms;
+  transition: transform 4000ms;
+  transition: transform 4000ms, -webkit-transform 4000ms;
+}
+/*# sourceMappingURL=style.css.map */
