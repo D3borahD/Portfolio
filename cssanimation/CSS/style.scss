@@ -97,3 +97,52 @@ body{
     transform: scale(0.1);
     transition: transform 4000ms;
 }
+
+/*Force mètre en cours => à regler la distance du curseur*/
+$trans-dur:2000ms;
+
+.forcemetre {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    height: 500px;
+    margin-left: 25px;
+    position: relative;
+}
+
+.jauge {
+    height: 500px;
+    width: 3rem;
+    margin-left: 15px;
+    background: linear-gradient(to top, $cd-txt, yellow, $cd-danger);
+    border-radius: 25px;
+    border: 2px solid blue;
+}
+
+.appuyer {
+    background: $cd-btn;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 15px;
+    font-size: 1rem;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 25px;
+    &:active + .curseur {
+        transform: translateY(-865%);
+    }
+}
+
+.curseur {
+    width: 45px;
+    height: 45px;
+    margin-left: 18px;
+    margin-top: -145px;
+    background: $cd-danger;
+    border-radius: 25px;
+    border: 1px solid $cd-btn-start;
+    transform: translateY(100%);
+    transition: transform $trans-dur cubic-bezier(.42, 0, .58, 1);
+}
