@@ -122,6 +122,7 @@ body {
           align-items: baseline;
   height: 500px;
   margin-left: 25px;
+  margin-bottom: 100px;
   position: relative;
 }
 
@@ -167,5 +168,293 @@ body {
   transition: -webkit-transform 2000ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: transform 2000ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: transform 2000ms cubic-bezier(0.42, 0, 0.58, 1), -webkit-transform 2000ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/*La propriété transform*/
+.boutontransforme {
+  width: 200px;
+  height: 50px;
+  font-size: large;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 25px;
+  background-color: #6300a0;
+  cursor: pointer;
+  color: white;
+}
+
+.boutontransforme:hover + .boite1 {
+  -webkit-transform: scale(3, 0.5);
+          transform: scale(3, 0.5);
+}
+
+.boite1 {
+  height: 100px;
+  width: 100px;
+  margin-left: 100px;
+  background-color: #15DEA5;
+  -webkit-transition: -webkit-transform 330ms ease-in-out;
+  transition: -webkit-transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
+}
+
+.boutontransforme2 {
+  width: 200px;
+  height: 50px;
+  font-size: large;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 25px;
+  background-color: #6300a0;
+  cursor: pointer;
+  color: white;
+}
+
+.boutontransforme2:hover + .boite2 {
+  -webkit-transform: translate(150px, -7vh);
+          transform: translate(150px, -7vh);
+}
+
+.boite2 {
+  height: 100px;
+  width: 100px;
+  margin-left: 100px;
+  background-color: #15DEA5;
+  -webkit-transition: -webkit-transform 330ms ease-in-out;
+  transition: -webkit-transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
+}
+
+.boutontransforme3 {
+  width: 200px;
+  height: 50px;
+  font-size: large;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 25px;
+  background-color: #6300a0;
+  cursor: pointer;
+  color: white;
+}
+
+.boutontransforme3:hover + .boite3 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.boutontransforme3:hover + .boite3 span {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.boite3 {
+  height: 100px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+  margin-left: 100px;
+  background-color: #15DEA5;
+  color: white;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  -webkit-transition: -webkit-transform 330ms ease-in-out;
+  transition: -webkit-transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
+  overflow: hidden;
+}
+
+.boite3 span {
+  display: inline-block;
+  -webkit-transform: translateY(250%);
+          transform: translateY(250%);
+  -webkit-transition: -webkit-transform 280ms ease-out 50ms;
+  transition: -webkit-transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
+}
+
+.boutontransforme4 {
+  width: 200px;
+  height: 50px;
+  font-size: large;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 25px;
+  background-color: #6300a0;
+  cursor: pointer;
+  color: white;
+}
+
+.boutontransforme4:hover + .boxes > .boxes--rotDegrees {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.boutontransforme4:hover + .boxes > .boxes--rotTurns {
+  -webkit-transform: rotate(0turn);
+          transform: rotate(0turn);
+}
+
+.boxes__base {
+  height: 100px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 100px;
+  text-align: center;
+  background-color: #15DEA5;
+  color: white;
+}
+
+.boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.boxes--rotDegrees {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.boxes--rotTurns {
+  background: pink;
+  -webkit-transform: rotate(-1turn);
+          transform: rotate(-1turn);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.boutontransforme5 {
+  width: 200px;
+  height: 50px;
+  font-size: large;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 25px;
+  background-color: #6300a0;
+  cursor: pointer;
+  color: white;
+}
+
+.boutontransforme5:hover + .boite5 {
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+}
+
+.boutontransforme5:hover + .boite5 span {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.boite5 {
+  height: 100px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-size: x-large;
+  margin-left: 100px;
+  background-color: #15DEA5;
+  color: white;
+  overflow: hidden;
+  -webkit-transform: scale(0.1) rotate(-90deg);
+          transform: scale(0.1) rotate(-90deg);
+  -webkit-transition: -webkit-transform 330ms ease-in-out;
+  transition: -webkit-transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
+}
+
+.boite5 span {
+  -webkit-transform: translateY(250%);
+          transform: translateY(250%);
+  -webkit-transition: -webkit-transform 280ms ease-out 50ms;
+  transition: -webkit-transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
+  display: block;
+}
+
+.boutontransforme6 {
+  width: 200px;
+  height: 50px;
+  font-size: large;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 25px;
+  background-color: #6300a0;
+  cursor: pointer;
+  color: white;
+}
+
+.boutontransforme6:hover + .boxes6 > .boxes6--rotDegrees {
+  -webkit-transform: translate(200%) scale(2);
+          transform: translate(200%) scale(2);
+}
+
+.boutontransforme6:hover + .boxes6 > .boxes6--rotTurns {
+  -webkit-transform: scale(2) translate(200%);
+          transform: scale(2) translate(200%);
+}
+
+.boxes6__base6 {
+  height: 100px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 100px;
+  text-align: center;
+  background-color: #15DEA5;
+  color: white;
+}
+
+.boxes6--rotDegrees {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.boxes6--rotTurns {
+  background: pink;
+  -webkit-transform: rotate(-1turn);
+          transform: rotate(-1turn);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
