@@ -6,7 +6,6 @@ $cd-box: rgb(178, 227, 241);
 $cd-txt2: #6300a0;
 $cd-danger: #b20a37;
 
-
 body{
     margin: 20px;
 }
@@ -306,7 +305,6 @@ transform: translateY(0);
     margin-left: 100px;
     background-color: $cd-txt;
     color: white;
-
     overflow: hidden;
     transform: scale(.1) rotate(-90deg);
     transition: transform 330ms ease-in-out;
@@ -350,8 +348,6 @@ transform: translateY(0);
 }
 
 .boxes6 {
-    
-
     &--rotDegrees {
         transform: rotate(-360deg);
         transition: transform 500ms ease-in-out;
@@ -362,3 +358,63 @@ transform: translateY(0);
         transition: transform 500ms ease-in-out;
     }
 }
+
+.boutontransforme7 {
+    width: 200px;
+    height: 50px;
+    font-size: large;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 25px;
+    background-color: $cd-txt2;
+    cursor: pointer;
+    color: white;
+    &:hover + .dim{
+        transform: perspective(0px) rotateY(0deg);
+    }
+}
+
+.dim {
+    height: 100px;
+    width: 100px;   
+    background-color: $cd-txt;
+    transform: perspective(150px) rotateY(75deg);
+    transition: transform 330ms ease-in-out;
+}
+
+.charge {
+    width: 200px;
+    height: 25px;
+    font-size: large;
+    text-align: center;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    background-color: $cd-txt;
+    cursor: pointer;
+    color: white;
+    &:active {
+    & + .progress {
+        & > .progress__bar {
+            transform: scaleX(1);
+        }
+    }
+    }  
+}
+
+.progress {
+    width: 500px;
+    height: 30px;
+    border: solid 2px $cd-btn;
+    background: white;
+    &__bar {
+        background-color: $cd-txt;
+        width: 490px;
+        height: 20px;
+        margin: auto;
+        margin: 5px;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+    }
+}
+

@@ -457,4 +457,73 @@ body {
   transition: transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
+
+.boutontransforme7 {
+  width: 200px;
+  height: 50px;
+  font-size: large;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 25px;
+  background-color: #6300a0;
+  cursor: pointer;
+  color: white;
+}
+
+.boutontransforme7:hover + .dim {
+  -webkit-transform: perspective(0px) rotateY(0deg);
+          transform: perspective(0px) rotateY(0deg);
+}
+
+.dim {
+  height: 100px;
+  width: 100px;
+  background-color: #15DEA5;
+  -webkit-transform: perspective(150px) rotateY(75deg);
+          transform: perspective(150px) rotateY(75deg);
+  -webkit-transition: -webkit-transform 330ms ease-in-out;
+  transition: -webkit-transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
+}
+
+.charge {
+  width: 200px;
+  height: 25px;
+  font-size: large;
+  text-align: center;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  background-color: #15DEA5;
+  cursor: pointer;
+  color: white;
+}
+
+.charge:active + .progress > .progress__bar {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.progress {
+  width: 500px;
+  height: 30px;
+  border: solid 2px #011c37;
+  background: white;
+}
+
+.progress__bar {
+  background-color: #15DEA5;
+  width: 490px;
+  height: 20px;
+  margin: auto;
+  margin: 5px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1), -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
 /*# sourceMappingURL=style.css.map */
