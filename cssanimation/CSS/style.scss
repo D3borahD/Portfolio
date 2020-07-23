@@ -418,3 +418,47 @@ transform: translateY(0);
     }
 }
 
+$mint: #15dea5;
+$navy: #022F40;
+
+.opacity {
+margin:300px auto;
+display: flex;
+width: 75%;
+align-items: center !important;
+justify-content: center !important;
+font-style: italic !important;
+font-weight: 800 !important;
+color: white;
+font-family: 'Montserrat', sans-serif;
+
+  .btn3 {
+    border-radius: 25px;
+    background-color: $mint;
+    font-size: 45px !important;
+    padding: 30px 45px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    &:hover {
+      border-radius: 25px;
+        &::after {
+          border-radius: 25px;
+            opacity: 1;
+        }
+    }
+    &::after {
+      border-radius: 25px;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: radial-gradient(circle, lighten($mint, 5) 0%, darken($mint, 10) 100%);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+}
+}

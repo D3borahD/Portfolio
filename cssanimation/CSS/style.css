@@ -526,4 +526,56 @@ body {
   transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
   transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1), -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
 }
+
+.opacity {
+  margin: 300px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  font-style: italic !important;
+  font-weight: 800 !important;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.opacity .btn3 {
+  border-radius: 25px;
+  background-color: #15dea5;
+  font-size: 45px !important;
+  padding: 30px 45px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.opacity .btn3:hover {
+  border-radius: 25px;
+}
+
+.opacity .btn3:hover::after {
+  border-radius: 25px;
+  opacity: 1;
+}
+
+.opacity .btn3::after {
+  border-radius: 25px;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle, #22eab1 0%, #11af82 100%);
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
 /*# sourceMappingURL=style.css.map */
