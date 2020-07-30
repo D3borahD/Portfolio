@@ -1,0 +1,143 @@
+.portfolio {
+  background-color: white;
+  color: #011c37;
+  width: 100px;
+  border: solid 1px #011c37;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: ease-in-out 450ms;
+  transition: ease-in-out 450ms;
+}
+
+.portfolio:hover {
+  background-color: #15DEA5;
+  color: white;
+}
+
+.progress {
+  width: 500px;
+  height: 30px;
+  border: solid 2px #011c37;
+  border-radius: 25px;
+  background: white;
+}
+
+.progress__bar {
+  background-color: #15DEA5;
+  border-radius: 25px;
+  width: 490px;
+  height: 20px;
+  margin: auto;
+  margin: 5px;
+  opacity: 1;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: progress-bar 1000ms 150ms both cubic-bezier(0.9, 0, 0.1, 1);
+          animation: progress-bar 1000ms 150ms both cubic-bezier(0.9, 0, 0.1, 1);
+}
+
+@-webkit-keyframes progress-bar {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 1;
+  }
+  17% {
+    -webkit-transform: scaleX(0.18);
+            transform: scaleX(0.18);
+  }
+  24% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+    -webkit-animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+            animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+  }
+  46% {
+    -webkit-transform: scaleX(0.81);
+            transform: scaleX(0.81);
+    -webkit-animation-timing-function: cubic-bezier(0.25, 0, 0.25, 1);
+            animation-timing-function: cubic-bezier(0.25, 0, 0.25, 1);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes progress-bar {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 1;
+  }
+  17% {
+    -webkit-transform: scaleX(0.18);
+            transform: scaleX(0.18);
+  }
+  24% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+    -webkit-animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+            animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+  }
+  46% {
+    -webkit-transform: scaleX(0.81);
+            transform: scaleX(0.81);
+    -webkit-animation-timing-function: cubic-bezier(0.25, 0, 0.25, 1);
+            animation-timing-function: cubic-bezier(0.25, 0, 0.25, 1);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+.cat {
+  width: 45vw;
+  height: 45vw;
+  position: absolute;
+  overflow: hidden;
+  background-image: url("../img/cat.png");
+  background-size: cover;
+  background-position: -5%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .1rem;
+  font-size: 4vw;
+  font-weight: 900;
+  color: palevioletred;
+  -webkit-animation: cat 1000ms 1300ms both;
+          animation: cat 1000ms 1300ms both;
+}
+
+@-webkit-keyframes cat {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cat {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style2.css.map */
