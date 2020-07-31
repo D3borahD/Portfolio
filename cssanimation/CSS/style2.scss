@@ -26,6 +26,7 @@ $prog-bar-dur: 1000ms;
 $prog-bar-delay: 150ms;
 $cat-delay: $prog-bar-dur + $prog-bar-delay*2;
 
+
 .progress {
     width: 500px;
     height: 30px;
@@ -73,10 +74,102 @@ $cat-delay: $prog-bar-dur + $prog-bar-delay*2;
     font-size: 4vw;
     font-weight: 900;
     color: palevioletred;
-    animation: cat 1000ms $cat-delay both;
+    animation: cat 1000ms $cat-delay backwards;
 }
 
 @keyframes cat {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+$cd-txt: #6300a0;
+$cd-txt--invalid: #fff;
+$cd-danger: #b20a37;
+$shake-intensity: 2%;
+
+.container {
+    margin-top: 500px;
+}
+
+.form {  
+    &__group {
+        & input {
+            border: 2px solid $cd-txt;
+            border-radius: 100rem;
+            color: $cd-txt;
+            font-size: 2.5rem;
+            outline: none;
+            padding: .5 rem 1.5rem;
+            width: 100%;
+            &:active, &:focus{
+                border: 2px solid $cd-txt;
+            }
+            &:not(:focus):invalid {
+                background-color: $cd-danger;
+                border: 2px solid $cd-danger;
+                color: $cd-txt--invalid;
+                animation: headshake 100ms cubic-bezier(.4,.1,.6,.9) 2;
+            }
+        }
+    }
+}
+
+@keyframes headshake {
+    25% {transform: translateX($shake-intensity);}
+    75% {transform: translateX(-$shake-intensity * -1);}
+} 
+
+$cd-bars: #15DEA5;
+$size: 3vh;
+$num-bars: 5;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur/$num-bars;
+$cd-bars-inv: #0E397F;
+
+.load {
+    width: $size*10;
+    height: $size*7.5;
+    display: flex;
+    justify-content: space-evenly;
+    &__bar {
+        background-color: $cd-bars;
+        height: 100%;
+        width: $size;
+        animation: bars $anim-dur backwards infinite ease-in-out alternate;
+        @for $i from 1 through $num-bars {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+            &--#{$i}-inv {
+                animation-delay: $anim-delay * $i + random(100)*15ms;
+                animation-direction: alternate-reverse;
+                animation-fill-mode: forwards;
+                background-color: $cd-bars-inv;
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
+        }
+    }
+}
+
+@keyframes bars {
+    0% {transform: scaleY(0.5);}
+    100% {transform: scaleY(1.0); }
+}
+
+.spin {
+    background-color: #15DEA5;
+    width: 30vh;
+    height: 30vh;
+    margin-left: 10vh;
+    animation: spin 3s linear infinite paused;
+    &:hover {
+        animation-play-state: running;
+    }
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
 }

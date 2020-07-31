@@ -119,8 +119,8 @@
   font-size: 4vw;
   font-weight: 900;
   color: palevioletred;
-  -webkit-animation: cat 1000ms 1300ms both;
-          animation: cat 1000ms 1300ms both;
+  -webkit-animation: cat 1000ms 1300ms backwards;
+          animation: cat 1000ms 1300ms backwards;
 }
 
 @-webkit-keyframes cat {
@@ -138,6 +138,226 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+.container {
+  margin-top: 500px;
+}
+
+.form__group input {
+  border: 2px solid #6300a0;
+  border-radius: 100rem;
+  color: #6300a0;
+  font-size: 2.5rem;
+  outline: none;
+  padding: .5 rem 1.5rem;
+  width: 100%;
+}
+
+.form__group input:active, .form__group input:focus {
+  border: 2px solid #6300a0;
+}
+
+.form__group input:not(:focus):invalid {
+  background-color: #b20a37;
+  border: 2px solid #b20a37;
+  color: #fff;
+  -webkit-animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
+          animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
+}
+
+@-webkit-keyframes headshake {
+  25% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+  75% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+}
+
+@keyframes headshake {
+  25% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+  75% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+}
+
+.load {
+  width: 30vh;
+  height: 22.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.load__bar {
+  background-color: #15DEA5;
+  height: 100%;
+  width: 3vh;
+  -webkit-animation: bars 1000ms backwards infinite ease-in-out alternate;
+          animation: bars 1000ms backwards infinite ease-in-out alternate;
+}
+
+.load__bar--1 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.load__bar--1-inv {
+  -webkit-animation-delay: 1130ms;
+          animation-delay: 1130ms;
+  animation-direction: alternate-reverse;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #0E397F;
+}
+
+.load__bar--1-inv:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.load__bar--2 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.load__bar--2-inv {
+  -webkit-animation-delay: 565ms;
+          animation-delay: 565ms;
+  animation-direction: alternate-reverse;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #0E397F;
+}
+
+.load__bar--2-inv:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.load__bar--3 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.load__bar--3-inv {
+  -webkit-animation-delay: 1890ms;
+          animation-delay: 1890ms;
+  animation-direction: alternate-reverse;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #0E397F;
+}
+
+.load__bar--3-inv:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.load__bar--4 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.load__bar--4-inv {
+  -webkit-animation-delay: 980ms;
+          animation-delay: 980ms;
+  animation-direction: alternate-reverse;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #0E397F;
+}
+
+.load__bar--4-inv:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.load__bar--5 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+
+.load__bar--5-inv {
+  -webkit-animation-delay: 2155ms;
+          animation-delay: 2155ms;
+  animation-direction: alternate-reverse;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #0E397F;
+}
+
+.load__bar--5-inv:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes bars {
+  0% {
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes bars {
+  0% {
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+.spin {
+  background-color: #15DEA5;
+  width: 30vh;
+  height: 30vh;
+  margin-left: 10vh;
+  -webkit-animation: spin 3s linear infinite paused;
+          animation: spin 3s linear infinite paused;
+}
+
+.spin:hover {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=style2.css.map */
